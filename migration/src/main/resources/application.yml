@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: ${SPRING_DATASOURCE_USERNAME:testadmin}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/test}
+    password: ${SPRING_DATASOURCE_PASSWORD:adminpwd}
+
+  liquibase:
+    enabled: true
+    default-schema: public
+    liquibase-schema: public
+    user: ${SPRING_DATASOURCE_USERNAME:testadmin}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/test}
+    password: ${SPRING_DATASOURCE_PASSWORD:adminpwd}
+server:
+  port: 8091

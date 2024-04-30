@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: ilya
+      author: ilya
+
+  - include:
+      file: data/001_create_api.sql
+      relativeToChangelogFile: true
+  - include:
+      file: data/002_create_services.sql
+      relativeToChangelogFile: true
+  - include:
+      file: data/003_data_positions.sql
+      relativeToChangelogFile: true
+

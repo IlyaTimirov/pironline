@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    username: ${SPRING_DATASOURCE_USERNAME:testadmin}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/test}
+    password: ${SPRING_DATASOURCE_PASSWORD:adminpwd}
+
+  kafka:
+    bootstrap-servers: localhost:9071
+    consumer:
+      group-id: pir
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      enable-auto-commit: true
+
+server:
+  port: 8098
+  compression:
+    enabled: true
+
